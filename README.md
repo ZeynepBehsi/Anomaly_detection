@@ -1,6 +1,6 @@
-🚀 Features
+# 🚀 Features
 
-Multiple Anomaly Detection Algorithms
+## Multiple Anomaly Detection Algorithms
 
 Statistical Methods: Z-Score, IQR
 Machine Learning: Isolation Forest, One-Class SVM, LOF
@@ -8,7 +8,7 @@ Clustering: DBSCAN, K-Means
 Multivariate: Mahalanobis Distance, Elliptic Envelope, PCA-based
 
 
-Flexible Data Input
+## Flexible Data Input
 
 Support for CSV, Excel files
 Automatic column detection
@@ -16,14 +16,14 @@ Custom column selection
 Data preprocessing and cleaning
 
 
-Interactive Interface
+## Interactive Interface
 
 Command-line interface
 Jupyter notebook examples
 Configuration file support
 
 
-Comprehensive Output
+## Comprehensive Output
 
 Detailed anomaly reports
 Visualization plots
@@ -32,32 +32,32 @@ Export results in multiple formats
 
 
 
-📋 Requirements
+# 📋 Requirements
 See requirements.txt for full dependencies.
 
-🔧 Installation
+# 🔧 Installation
 bash# Clone the repository
 git clone https://github.com/yourusername/anomaly-detection-toolkit.git
 cd anomaly-detection-toolkit
 
-# Install dependencies
+## Install dependencies
 pip install -r requirements.txt
 
-# Or install as a package
+## Or install as a package
 pip install -e .
 🎯 Quick Start
 Basic Usage
 pythonfrom src.anomaly_detector import AnomalyDetector
 from src.data_processor import DataProcessor
 
-# Load and process data
+## Load and process data
 processor = DataProcessor()
 data = processor.load_data('data/input/your_dataset.csv')
 
-# Initialize detector
+## Initialize detector
 detector = AnomalyDetector()
 
-# Detect anomalies
+## Detect anomalies
 results = detector.detect_anomalies(
     data=data,
     columns=['column1', 'column2'],
@@ -65,7 +65,7 @@ results = detector.detect_anomalies(
     logic='union'
 )
 
-# Save results
+## Save results
 results.to_csv('data/output/anomalies.csv')
 Command Line Usage
 bashpython -m src.anomaly_detector \
@@ -73,27 +73,26 @@ bashpython -m src.anomaly_detector \
     --columns col1,col2,col3 \
     --methods isolation_forest,z_score \
     --output data/output/results.csv
-📊 Supported Algorithms
-Univariate Methods
 
-Z-Score: Statistical outlier detection based on standard deviations
-IQR (Interquartile Range): Outliers beyond Q1-1.5IQR or Q3+1.5IQR
-Isolation Forest: Tree-based anomaly detection
-Local Outlier Factor (LOF): Density-based outlier detection
-One-Class SVM: Support Vector Machine for novelty detection
+# 📊 Supported Algorithms
 
-Multivariate Methods
+## Univariate Methods
+- Z-Score: Statistical outlier detection based on standard deviations
+- IQR (Interquartile Range): Outliers beyond Q1-1.5IQR or Q3+1.5IQR
+- Isolation Forest: Tree-based anomaly detection
+- Local Outlier Factor (LOF): Density-based outlier detection
+- One-Class SVM: Support Vector Machine for novelty detection
 
-Mahalanobis Distance: Distance-based detection considering correlations
-Elliptic Envelope: Robust covariance estimation
-PCA-based: Principal Component Analysis reconstruction error
+## Multivariate Methods
+- Mahalanobis Distance: Distance-based detection considering correlations
+- Elliptic Envelope: Robust covariance estimation
+- PCA-based: Principal Component Analysis reconstruction error
 
-Clustering Methods
+## Clustering Methods
+- DBSCAN: Density-based clustering outliers
+- K-Means: Distance from cluster centers
 
-DBSCAN: Density-based clustering outliers
-K-Means: Distance from cluster centers
-
-🔧 Configuration
+# 🔧 Configuration
 Customize detection parameters in config/config.yaml:
 yamldetection:
   default_contamination: 0.05
@@ -108,7 +107,7 @@ output:
   include_scores: true
   export_plots: true
 
-📈 Examples
+# 📈 Examples
 See the examples/ directory and Jupyter notebooks for detailed usage examples.
 🤝 Contributing
 
@@ -118,13 +117,12 @@ Commit your changes (git commit -m 'Add amazing feature')
 Push to the branch (git push origin feature/amazing-feature)
 Open a Pull Request
 
-📄 License
+# 📄 License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-📧 Contact
+# 📧 Contact
 Your Name - zeynepbehsi@gmail.com
 
-Project Link: 
 
 🙏 Acknowledgments
 
