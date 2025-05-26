@@ -1,0 +1,113 @@
+# Anomaly Detection Toolkit Configuration
+
+# Detection parameters
+detection:
+  # Default contamination ratio (expected proportion of anomalies)
+  default_contamination: 0.05
+  
+  # Z-Score threshold for statistical outlier detection
+  z_score_threshold: 3
+  
+  # IQR multiplier for interquartile range method
+  iqr_multiplier: 1.5
+  
+  # Mahalanobis distance threshold multiplier
+  mahalanobis_threshold: 3
+  
+  # PCA parameters
+  pca_components: 0.95  # Variance to preserve (0-1) or number of components
+  pca_threshold: 2      # Reconstruction error threshold multiplier
+  
+  # Random state for reproducible results
+  random_state: 42
+
+# Data processing parameters
+data_processing:
+  # Scaler type: 'standard', 'robust', 'minmax'
+  scaler_type: 'standard'
+  
+  # Missing value handling: 'median', 'mean', 'drop', 'forward_fill'
+  missing_value_strategy: 'median'
+  
+  # Whether to remove duplicate rows
+  remove_duplicates: true
+  
+  # Columns to automatically exclude from analysis
+  auto_exclude_patterns:
+    - 'id'
+    - 'index'
+    - 'timestamp'
+    - 'date'
+
+# Visualization parameters
+visualization:
+  # Default figure size [width, height]
+  figure_size: [12, 8]
+  
+  # Color palette for plots
+  color_palette: 'viridis'
+  
+  # DPI for saved plots
+  dpi: 300
+  
+  # Plot style
+  style: 'whitegrid'
+
+# Output parameters
+output:
+  # Include anomaly scores in output
+  include_scores: true
+  
+  # Export visualization plots
+  export_plots: true
+  
+  # Output file format: 'csv', 'excel', 'json'
+  default_format: 'csv'
+  
+  # Timestamp format for output files
+  timestamp_format: '%Y%m%d_%H%M%S'
+
+# Method-specific parameters
+method_parameters:
+  isolation_forest:
+    n_estimators: 100
+    max_samples: 'auto'
+    max_features: 1.0
+    bootstrap: false
+  
+  lof:
+    n_neighbors: 20
+    algorithm: 'auto'
+    leaf_size: 30
+    metric: 'minkowski'
+    p: 2
+  
+  one_class_svm:
+    kernel: 'rbf'
+    gamma: 'scale'
+    tol: 1e-3
+    max_iter: -1
+  
+  dbscan:
+    eps: 0.5
+    min_samples: 5
+    algorithm: 'auto'
+    leaf_size: 30
+    p: 2
+  
+  kmeans:
+    n_clusters: 5
+    init: 'k-means++'
+    n_init: 10
+    max_iter: 300
+    tol: 1e-4
+
+# Logging configuration
+logging:
+  level: 'INFO'  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+  date_format: '%Y-%m-%d %H:%M:%S'
+  
+  # Log to file
+  log_to_file: false
+  log_file: 'logs/anomaly_detection.log'
