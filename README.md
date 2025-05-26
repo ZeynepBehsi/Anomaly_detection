@@ -116,11 +116,10 @@ Open a Pull Request
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 # 📧 Contact
-Your Name - zeynepbehsi@gmail.com
+zeynepbehsi@gmail.com
 
 
 🙏 Acknowledgments
-
 Scikit-learn community for excellent ML algorithms
 Pandas team for data manipulation tools
 All contributors who help improve this toolkit
