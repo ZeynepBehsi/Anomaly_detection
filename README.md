@@ -32,13 +32,8 @@ Export results in multiple formats
 
 
 
-# 📋 Requirements
+## 📋 Requirements
 See requirements.txt for full dependencies.
-
-# 🔧 Installation
-bash# Clone the repository
-git clone https://github.com/yourusername/anomaly-detection-toolkit.git
-cd anomaly-detection-toolkit
 
 ## Install dependencies
 pip install -r requirements.txt
