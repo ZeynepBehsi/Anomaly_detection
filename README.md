@@ -53,7 +53,21 @@ Visualization plots
 Performance metrics
 Export results in multiple formats
 
+# 🔄 Workflow
 
+```mermaid
+journey
+    title Anomali Tespit İş Akışı
+    section Veri Yükleme
+      Kullanıcı veri dosyası yükler: 5: Kullanıcı
+      Sistem veriyi ön işler: 4: Sistem
+    section Tespit
+      Kullanıcı algoritma seçer: 3: Kullanıcı
+      Sistem anomali tespit eder: 5: Sistem
+    section Çıktı
+      Sonuçlar gösterilir: 4: Sistem
+      Kullanıcı sonuçları export eder: 4: Kullanıcı
+```
 
 ## 📋 Requirements
 See requirements.txt for full dependencies.
