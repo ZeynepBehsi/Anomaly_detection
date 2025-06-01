@@ -1,3 +1,26 @@
+# 🏗️ System Architecture
+```mermaid
+flowchart TB
+    subgraph Proje Mimarisi
+        A[Veri Girişi] --> B[DataProcessor]
+        B --> C[AnomalyDetector]
+        C --> D[Algoritmalar]
+        D --> E[Sonuçlar]
+    end
+
+    subgraph Algoritmalar
+        D --> F[İstatistiksel\nZ-Score, IQR]
+        D --> G[Makine Öğrenmesi\nIsolation Forest, One-Class SVM]
+        D --> H[Kümeleme\nDBSCAN, K-Means]
+        D --> I[Çok Değişkenli\nMahalanobis, PCA]
+    end
+
+    E --> J[Raporlar]
+    E --> K[Görselleştirmeler]
+    E --> L[Metrics]
+```
+
+
 # 🚀 Features
 
 ## Multiple Anomaly Detection Algorithms
